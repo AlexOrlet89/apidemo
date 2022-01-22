@@ -7,8 +7,8 @@ import { getStarWarsPeople } from './fetch.js';
 const template = document.querySelector('#template');
 const list = document.querySelector('#list');
 const selectEl = document.querySelector('select');
-// not doing the select funciton.
-console.log('dom', template);
+// not doing the select function.
+// console.log('dom', template);
 
 async function loadPokedex() {
     const pokedex = await getPokedex();
@@ -36,7 +36,7 @@ async function loadPokedex() {
 
 async function loadStarWarsPeople() {
     const starWarsPeople = await getStarWarsPeople();
-    console.log(starWarsPeople);
+    // console.log(starWarsPeople);
     //     // list.classList.add('name');
 
     for (let starWars of starWarsPeople) {
@@ -57,9 +57,21 @@ async function loadStarWarsPeople() {
 }
 loadStarWarsPeople();
 
-selectEl.addEventListener('change', (e) => {
-    console.log('user click');
+selectEl.addEventListener('change', async(e) => {
+    // console.log('user click');
+
+    const selected = e.target.value;
+
+    if (selected === 'pokemon') {
+        list.innerHTML = '';
+        await loadPokedex();
+    } else if (selected === 'star-wars') {
+        list.innerHTML = '';
+        await loadStarWarsPeople();
+    }
 });
+
+
 
         // set event listeners 
         // get user input
