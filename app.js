@@ -4,6 +4,7 @@ import { getPokedex } from './fetch.js';
 // console.log('app.js is working');
 
 const template = document.querySelector('#template');
+const list = document.querySelector('#list');
 // const selectEl = document.querySelector('select');
 // not doing the select funciton.
 console.log('dom', template);
