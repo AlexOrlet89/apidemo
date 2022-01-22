@@ -1,5 +1,5 @@
 // import functions
-import {}
+import { getPokedex } from "./fetch";
 // grab DOM elements
 const template = document.querySelector('#template');
 // const selectEl = document.querySelector('select');
