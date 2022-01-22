@@ -59,7 +59,7 @@ loadStarWarsPeople();
 
 selectEl.addEventListener('change', (e) => {
     console.log('user click');
-})
+});
 
         // set event listeners 
         // get user input
