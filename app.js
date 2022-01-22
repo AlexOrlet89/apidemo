@@ -22,7 +22,7 @@ async function loadPokedex() {
         console.log(pokemon, name, image);
 
         name.textContent = 'Name: ' + pokemon.pokemon;
-        type.textContent = 'Egg: pokemon.egg_group_1';
+        type.textContent = 'Egg: ' + pokemon.egg_group_1;
         image.src = pokemon.url_image;
         image.alt = pokemon.pokedex;
 
