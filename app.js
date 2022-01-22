@@ -15,11 +15,19 @@ async function loadPokedex() {
 
     for (let pokemon of pokedex) {
         const clone = template.content.cloneNode(true);
+
         const name = clone.querySelector('h2');
         const image = clone.querySelector('img');
         const type = clone.querySelector('h6');
+        console.log(pokemon, name, image);
+
+        name.textContent = 'Name: ' + pokemon.pokemon;
+        type.textContent = 'Egg: pokemon.egg_group_1';
+        image.src = pokemon.url_image;
+        image.alt = pokemon.pokedex;
+
+        list.appendChild(clone);
     }
-    console.log(pokemon, name, image);
     // console.log(pokedex);
 }
 
